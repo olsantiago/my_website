@@ -1,0 +1,101 @@
+#cssmenu {
+    background: transparent;
+    width: auto;
+  }
+  #cssmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+    zoom: 1;
+    text-align:center;
+  }
+  
+  #cssmenu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #cssmenu ul li .Menu-item {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    -webkit-transition: color .25s;
+    -moz-transition: color .25s;
+    -ms-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
+  }
+  #cssmenu ul li .Menu-item:hover {
+    color: #ab9fd4;
+
+  }
+  #cssmenu ul li .Menu-item:hover:before {
+    width: 100%;
+  }
+  #cssmenu ul li .Menu-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -3px;
+    top: 13px;
+    height: 19px;
+    width: 3px;
+    background: #ffffff;
+    opacity: .5;
+  }
+  #cssmenu ul li .Menu-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #ab9fd4;
+    -webkit-transition: width .25s;
+    -moz-transition: width .25s;
+    -ms-transition: width .25s;
+    -o-transition: width .25s;
+    transition: width .25s;
+    padding-bottom: 0;
+  }
+  
+  #cssmenu ul li:last-child > .Menu-item:after {
+    display: none;
+  }
+  #cssmenu ul li .Menu-item--Active {
+    color: #333333;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    #cssmenu {
+      padding: 10px;
+    }
+
+    #cssmenu ul li {
+      float: none;
+   
+    }
+    #cssmenu ul li a {
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  
+    }
+    #cssmenu ul li.last > a,
+    #cssmenu ul li:last-child > a {
+      border: 0;
+    }
+  
+  }

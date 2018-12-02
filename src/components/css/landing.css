@@ -1,0 +1,136 @@
+/*Landing page*/
+
+.banner{
+    background-color: transparent;
+    opacity:.8;
+    width:75%;
+    margin:auto;
+    text-align: center;
+    padding: 15em 0 15em 0 ;
+  }
+  
+  .banner h1{
+    animation: fade-slide-up .5s ;
+    font-size: 66px;
+    font-weight: bold;
+    color:white;
+  }
+
+  .banner hr{
+    animation:line .5s;
+    border-top: 3px solid #ab9fd4;
+    width: 100%;
+  
+  }
+  
+  .banner .bottom{
+    animation:fade-slide-down .5s;
+  }
+
+  .banner .tagline{
+    color: white;
+    font-size: 20px;
+  }
+  
+  .social_links{
+    display: inline-flex;
+    justify-content: space-between;
+    width:20em;
+  }
+  
+  .social_links i{
+    color:white;
+    font-size:4em;
+    padding: 8px;
+  }
+
+  .social_links i:hover {
+    animation: bounce 1s;
+    color: #ab9fd4;
+}
+
+  /*h1 effects*/
+  @keyframes fade-slide-up{
+    0%{
+      opacity:0;
+      transform: translateY(2rem);
+    }
+
+    100%{
+      opacity:1;
+      transform: none;
+    }
+  }
+
+  @keyframes line{
+    0%{
+      opacity:0;
+      transform: scaleX(0)
+    }
+
+    100%{
+      opacity:1;
+    }
+  }
+
+  @keyframes fade-slide-down{
+    0%{
+      opacity:0;
+      transform: translateY(-2rem);
+    }
+
+    100%{
+      opacity:1;
+      transform: none;
+    }
+  }
+  
+
+
+
+  /*social links effects*/
+  @keyframes bounce {
+      0%, 20%, 60%, 100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+      }
+  
+      40% {
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+      }
+  
+      80% {
+          -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner{
+      width:100%;
+      padding: 8em 0 8em 0 ;
+    }  
+    .banner h1{
+      font-size: 37px;
+      font-weight: bold;
+      color:white;
+    }
+
+    .banner .tagline{
+      font-size: 10px;
+    }
+
+    .social_links{
+      justify-content: center;
+    }
+
+    .social_links i{
+      font-size:2.5em;
+
+    }
+  
+  }
+
+
+  

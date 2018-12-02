@@ -1,0 +1,43 @@
+.App{
+  background-color: #2E4158;
+  height: 100%;
+  width:100%;
+  position: fixed;
+  overflow: auto;
+}
+
+.home{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  background-color: transparent;
+  opacity:0.6;
+
+}
+
+.home i{
+  color:white;
+  font-size:2.5em;
+  animation: fade-slide-up 1s;
+}
+
+.home i:hover {
+  color: #ab9fd4;
+}
+
+@keyframes fade-slide-up{
+  0%{
+    opacity:0;
+    transform: translateY(2rem);
+  }
+
+  100%{
+    opacity:1;
+    transform: none;
+  }
+}
+
+
