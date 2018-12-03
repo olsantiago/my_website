@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/message_form.css';
 import Dialog_Box from './dialog';
+import $ from 'jquery';
 
 {/*
 import axios from 'axios';
@@ -28,8 +29,8 @@ class Message_Form extends Component {
 
         async handleSubmit(e) {
             e.preventDefault()
-            
             console.log(this.state)
+
             {/*
                 const { name, email, message} = this.state
                 const form = await axios.post('/api/form', {
@@ -37,11 +38,36 @@ class Message_Form extends Component {
                 email,
                 message
             })
-            */ }
-
-            {/* Remove comment tags and console.log function if backend is available */}
-            
+            */ } {/* Remove comment tags and console.log function if backend is available */}  
         }
+
+        componentDidMount = () => {
+
+            {/*You can delete/edit this validation this is just a simple front end validation*/}
+                var letters = /^[A-Za-z ]+$/;
+                var form = $('#name, #email, #message');
+                var email = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                $('.FormField_Button').click(function(){
+                    alert('Message Sent!')
+                })
+            
+                form.keyup(function(){
+                    if(!$('#name').val().match(letters)){
+                        $('#name-error').html("Name must contain letters only*");
+                    }
+                    if($('#name').val()=="" || $('#name').val().match(letters)){
+                        $('#name-error').html("");
+                    }
+                    if(!$('#email').val().match(email)){
+                        $('#email-error').html("Invalid Email Address*");
+                    }
+                    if($('#email').val()=="" || $('#email').val().match(email)){
+                        $('#email-error').html("");
+                    }
+                })
+            {/*You can delete/edit this validation this is just a simple front end validation */}
+    
+        }; 
 
     render() {
         return (
@@ -56,6 +82,8 @@ class Message_Form extends Component {
                     placeholder="Enter your name"
                     onChange={this.handleChange} 
                     name="name" />
+                    <br/>
+                <span id="name-error"></span>
               </div>
 
             <div className="FormField">
@@ -67,6 +95,8 @@ class Message_Form extends Component {
                     placeholder="Enter your email"
                     onChange={this.handleChange}  
                     name="email" />
+                    <br/>
+                <span id="email-error"></span>
               </div>
 
             <div className="FormField">

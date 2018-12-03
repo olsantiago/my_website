@@ -53,3 +53,7 @@ input[type=email]:focus{
 input[type=textarea]:focus{
   border-bottom: 2px solid #ab9fd4;
 }
+
+.FormFields span{
+  color: red;
+}

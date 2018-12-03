@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Dialog, DialogContent, DialogTitle, DialogActions, Button} from 'react-mdl';
+import './css/dialog.css';
 
 
 class Dialog_Box extends React.Component {
@@ -34,11 +35,11 @@ class Dialog_Box extends React.Component {
                   style={{backgroundColor:'#ab9fd4', 
                           borderRadius:'2em'}}
                   >Send Message</Button>
-          <Dialog open={this.state.openDialog}  >
+          <Dialog className='dialog_box' open={this.state.openDialog}  >
             <DialogTitle>Sent</DialogTitle>
             <DialogContent>
-              <p style={{color:'grey'}}>Github does not provide back-end support, here is the full <a href='https://github.com/olsantiago/-Express-Nodemailer-_Form/tree/master/React' target='_blank'>repository</a>. <br/>Otherwise, email me @ oliveratwork08@gmail.com.</p>
-              <p style={{color:'grey'}}>Also, check log<br/> Thank You!</p>
+              <p style={{color:'grey'}}>Github does not provide back-end support, here is the full <a href='https://github.com/olsantiago/-Express-Nodemailer-_Form/tree/master/React' target='_blank'>repository</a>. <br/>Please, email me @ oliveratwork08@gmail.com.</p>
+              <p style={{color:'grey'}}>I do apologize, check log to see email.<br/> Thank You!</p>
             </DialogContent>
             <DialogActions>
               <Button type='button' onClick={this.handleCloseDialog}>Close</Button>

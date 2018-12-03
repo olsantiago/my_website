@@ -3,7 +3,7 @@ import {Card, CardTitle, CardText, CardActions, Button} from 'react-mdl';
 import './projects.css';
 import 'react-mdl';
 
-class Meetch extends Component{
+class B_end_form extends Component{
     render(){
         return(
                 <div>
@@ -17,12 +17,12 @@ class Meetch extends Component{
                             marginBottom:'10px', 
                             boxShadow: '0 0 8px 0px #ab9fd4',
                             }}>
-                    <CardTitle className='card_title' expand style={{ color: 'black', background: 'url(http://travelwithmeetch.com/images/Travel-with-meetch.png) center / cover'}}>TravelwithMeetch</CardTitle>
+                    <CardTitle className='card_title' expand style={{ color: 'white', background: 'url(https://cdn-images-1.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png) center / cover'}}>React Form</CardTitle>
                         <CardText style={{width:'100%', color:'white', backgroundColor:'#ab9fd4'}}>
-                            A travel blog website made with Vanilla Javascript
+                            Email form using Axios, Nodemailer and Express
                         </CardText>
                     <CardActions border style={{backgroundColor:'#ab9fd4'}}>
-                    <a href='http://travelwithmeetch.com' target='_blank' rel='noopener noreferrer'><Button colored ripple style={{color:'white', backgroundColor:'black', borderRadius:'25px'}}>Check Out</Button></a>
+                    <a href='https://github.com/olsantiago/-Express-Nodemailer-_Form/tree/master/React' target='_blank' rel='noopener noreferrer'><Button colored ripple style={{color:'white', backgroundColor:'black', borderRadius:'25px'}}>Check Out</Button></a>
                     </CardActions>
                 </Card>
                 </div>
@@ -30,4 +30,4 @@ class Meetch extends Component{
     }
 }
 
-export default Meetch;
+export default B_end_form;

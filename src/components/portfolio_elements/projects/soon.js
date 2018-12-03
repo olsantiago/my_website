@@ -6,7 +6,7 @@ class Soon extends Component{
     render(){
         return(
                 <div>
-                <Card className='card' shadow={0} style={{width: '220px', height: '300px', margin:'auto', borderRadius:'0.5em', boxShadow: '0 0 8px 0px #ab9fd4'}}>
+                <Card className='card' shadow={0} style={{width: '220px', height: '300px', margin:'auto', borderRadius:'0.3em', boxShadow: '0 0 8px 0px #ab9fd4'}}>
                     <CardTitle className='card_title' expand style={{ color: 'black', backgroundColor:'black', background: 'url(https://cdn.worldvectorlogo.com/logos/angular-icon.svg) center / cover'}}>Coming Soon</CardTitle>
                         <CardText style={{width:'100%', height:'70px', color:'white', backgroundColor:'#ab9fd4'}}>
                             Project on progress....

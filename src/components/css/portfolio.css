@@ -5,7 +5,7 @@
     padding: 2em;
   }
 
-.column_left {
+.portfolio-page .column_left {
     float: left;
     width: 50%;
     background-color: black;
@@ -18,7 +18,7 @@
 .column_left .portfolio-elem{
     display: inline-flex;
     justify-content: space-evenly;
-    width:60%;
+    width:100%;
 }
 
 .portfolio_column_right {
@@ -46,9 +46,8 @@
 }
 
 
-
-@media screen and (max-width: 1300px) {
-    .column_left {
+@media screen and (max-width: 1600px) {
+  .portfolio-page .column_left {
         width: 100%;
         padding: 2em;
         height: 77vh;
@@ -58,8 +57,7 @@
     }
     
     .column_left .portfolio-elem{
-        display: block;
-        justify-content: center;
+        display: flex;
         width: 100%
     }
 
